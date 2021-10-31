@@ -48,7 +48,6 @@ function ResultContainer() {
   }
 
   const ordersData = useAppSelector(getOrdersArray);
-  console.log(ordersData, "ordersData");
 
   let resultStatusObjectValue: any = !ordersData ? resultObject.errorSpam : resultObject.error;
   if (ordersData && ordersData.length) {

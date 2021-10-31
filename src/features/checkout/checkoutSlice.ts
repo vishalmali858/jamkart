@@ -29,7 +29,6 @@ export const checkoutSlice = createSlice({
   initialState,
   reducers: {
     setAddressData: (state, action: PayloadAction<any>) => {
-      console.log(action.payload, "Action.payload");
       state.checkoutShippingData = action.payload;
     },
     setCardData: (state, action: PayloadAction<any>) => {
@@ -42,7 +41,6 @@ export const checkoutSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(asyncSendShippingData.fulfilled, (state, action: any) => {
-        console.log(current(state), action.payload);
         if(!state.ordersArray) {
           state.ordersArray = [];
         }
