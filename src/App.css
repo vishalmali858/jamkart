@@ -1,3 +1,11 @@
+:root {
+  --textColor :black;
+  --bodyBackgroundColor: white;
+  --headerOverlayColor: white;
+  --footerOverlayColor: white;
+  --bodyOverlayColor: white;
+}
+
 .App {
   text-align: center;
 }
@@ -36,4 +44,101 @@
   100% {
     transform: translateY(0px);
   }
+}
+
+body {
+  background-color: transparent !important;
+}
+
+header.ant-layout-header {
+  background: var(--headerOverlayColor);
+  height: 75px;
+  padding: 0px 0px 0px 20px;
+  position: fixed;
+  z-index: 1; 
+  width: 100%;
+  border-bottom: 2px solid #3385d9;
+}
+
+footer.ant-layout-footer {
+  background: var(--footerOverlayColor);
+  height: 65px;
+  z-index: 1; 
+  width: 100%;
+  padding: 10px;
+  border-top: 2px solid #3385d9;
+}
+
+footer.ant-layout-footer .footerComponent > .ant-space.ant-space-horizontal {
+    width: 100%;
+    justify-content: space-between;
+}
+
+footer.ant-layout-footer .footerComponent > .ant-space.ant-space-horizontal .ant-space.ant-space-vertical {
+  text-align: left;
+}
+
+main.ant-layout-content {
+    margin-top: 75px;
+    min-height: calc(100vh - 145px);
+}
+
+.steps-content {
+  padding-top: 20px;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.productContainer {
+  padding: 20px;
+}
+
+.productCount .ant-badge-count {
+  width: 35px;
+  height: 30px;
+  top: 5px;
+  padding-top: 4px;
+  font-size: 16px;
+  border-radius: 0px;
+  box-shadow: none;
+  background: transparent;
+  color: black;
+}
+
+.productCountButton {
+  padding: 0px !important;
+}
+
+.ant-btn.selectedButton {
+  border: 2px solid #3385d9;
+}
+
+.cartPreviewContainer {
+  background-color: white;
+  padding: 20px;
+}
+
+.ant-typography {
+  margin: 0px !important;
+}
+
+.cardInBadge .ant-card-body {
+  margin-top: 25px !important;
+}
+
+.productShippingContainer {
+  background-color: white;
+  padding-top: 20px !important;
+  padding: 10px;
+  width: 100%;
+}
+
+.cartPreviewFooterButtons {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.buttonCartHeader .ant-badge-count {
+  top: 4px;
+  right: 10px;
 }
