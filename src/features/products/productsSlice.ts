@@ -30,7 +30,7 @@ export const productsSlice = createSlice({
         if (action.payload.hasOwnProperty("errorCode")) {
           return
         }
-        state.productsData = action.payload;
+        state.productsData = action.payload.products;
       })
   }
 });

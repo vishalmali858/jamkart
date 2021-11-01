@@ -3,7 +3,6 @@ export function fetchProducts() {
     let req = new XMLHttpRequest();
     req.open('GET', "https://test.ejam.com/api/recruitment/frontendtask1/products");
     req.onload = function () {
-      debugger
       if (req.status === 200) {
         resolve(JSON.parse(req.response));
       } else {

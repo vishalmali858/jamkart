@@ -40,7 +40,7 @@ function ProductComponent(props: Iprops) {
         </>
     }
 
-    const pDataSourceData = productsData.length === 0 ? [...new Array(5)].map(() => { return { metaTitle: "", description: "" } }) : productsData.map(function (productData: any, productId: any) {
+    const pDataSourceData = (!productsData || productsData.length === 0) ? [...new Array(5)].map(() => { return { metaTitle: "", description: "" } }) : productsData.map(function (productData: any, productId: any) {
         const { id, imageUrl, name, pCount = 1 } = productData;
         return {
             metaTitle: name,
@@ -68,7 +68,7 @@ function ProductComponent(props: Iprops) {
         }
         return cardValueCompProps
     }
-    return <CardComponent {...getCardValuefromComponent(from)} dataSource={pDataSourceData} />
+    return <CardComponent loadingSkeleton={!productsData || productsData.length === 0 ? true : false} {...getCardValuefromComponent(from)} dataSource={pDataSourceData} />
 }
 
 export default ProductComponent;
